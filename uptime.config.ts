@@ -31,7 +31,7 @@ const workerConfig = {
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
       statusPageLink: 'https://devarshi.dev',
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
-      expectedCodes: [200],
+      // expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
       timeout: 10000,
       // [OPTIONAL] headers to be sent
@@ -51,7 +51,6 @@ const workerConfig = {
       method: 'GET',
       target: 'https://static.devarshi.dev',
       statusPageLink: 'https://static.devarshi.dev',
-      expectedCodes: [200],
       timeout: 10000,
       headers: {
         'User-Agent': 'Uptimeflare',
@@ -64,7 +63,6 @@ const workerConfig = {
       method: 'GET',
       target: 'https://cve-2024-6387-checker.devarshi.dev/',
       statusPageLink: 'https://cve-2024-6387-checker.devarshi.dev/',
-      expectedCodes: [200],
       timeout: 10000,
       headers: {
         'User-Agent': 'Uptimeflare',
@@ -77,7 +75,6 @@ const workerConfig = {
       method: 'GET',
       target: 'https://lunar.devarshi.dev/',
       statusPageLink: 'https://lunar.devarshi.dev/',
-      expectedCodes: [200],
       timeout: 10000,
       headers: {
         'User-Agent': 'Uptimeflare',
@@ -90,7 +87,6 @@ const workerConfig = {
       method: 'GET',
       target: 'https://data.devarshi.dev/',
       statusPageLink: 'https://data.devarshi.dev/',
-      expectedCodes: [200],
       timeout: 10000,
       headers: {
         'User-Agent': 'Uptimeflare',
