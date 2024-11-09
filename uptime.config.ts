@@ -1,11 +1,12 @@
 const pageConfig = {
   // Title for your status page
-  title: "lyc8503's Status Page",
+  title: "Devarshi Shimpi's Status Page",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://github.com/lyc8503', label: 'GitHub' },
-    { link: 'https://blog.lyc8503.net/', label: 'Blog' },
-    { link: 'mailto:me@lyc8503.net', label: 'Email Me', highlight: true },
+    { link: 'https://github.com/devarshishimpi', label: 'GitHub' },
+    { link: 'https://devarshi.dev/blog', label: 'Blog' },
+    { link: 'mailto:devarshishimpi@gmail.com', label: 'Email' },
+    { link: 'https://bio.link/devarshishimpi', label: 'About', highlight: true },
   ],
 }
 
@@ -16,20 +17,19 @@ const workerConfig = {
   // passwordProtection: 'username:password',
   // Define all your monitors here
   monitors: [
-    // Example HTTP Monitor
     {
       // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'foo_monitor',
+      id: 'devarshi_dev',
       // `name` is used at status page and callback message
-      name: 'My API Monitor',
+      name: 'Personal Portfolio Site',
       // `method` should be a valid HTTP Method
-      method: 'POST',
+      method: 'GET',
       // `target` is a valid URL
-      target: 'https://example.com',
+      target: 'https://devarshi.dev',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
-      tooltip: 'This is a tooltip for this monitor',
+      // tooltip: 'This is a tooltip for this monitor',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://example.com',
+      statusPageLink: 'https://devarshi.dev',
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
       expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
@@ -37,43 +37,93 @@ const workerConfig = {
       // [OPTIONAL] headers to be sent
       headers: {
         'User-Agent': 'Uptimeflare',
-        Authorization: 'Bearer YOUR_TOKEN_HERE',
+        // Authorization: 'Bearer YOUR_TOKEN_HERE',
       },
-      // [OPTIONAL] body to be sent
-      body: 'Hello, world!',
       // [OPTIONAL] if specified, the response must contains the keyword to be considered as operational.
       responseKeyword: 'success',
       // [OPTIONAL] if specified, the check will run in your specified region,
-      // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
-      checkLocationWorkerRoute: 'https://xxx.example.com',
+      // refer to docs https://github.com/devarshishimpi/statusflare-devarshi-dev/wiki/Geo-specific-checks-setup before setting this value
+      // checkLocationWorkerRoute: 'https://xxx.example.com',
+    },
+    {
+      id: 'static_devarshi_dev',
+      name: 'Static CDN',
+      method: 'GET',
+      target: 'https://static.devarshi.dev',
+      statusPageLink: 'https://static.devarshi.dev',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+      },
+      responseKeyword: 'success',
+    },
+    {
+      id: 'cve_2024_6387_checker_devarshi_dev',
+      name: 'CVE 2024 6387 Checker Website',
+      method: 'GET',
+      target: 'https://cve-2024-6387-checker.devarshi.dev/',
+      statusPageLink: 'https://cve-2024-6387-checker.devarshi.dev/',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+      },
+      responseKeyword: 'success',
+    },
+    {
+      id: 'lunar_devarshi_dev',
+      name: 'Lunar Theme Website',
+      method: 'GET',
+      target: 'https://lunar.devarshi.dev/',
+      statusPageLink: 'https://lunar.devarshi.dev/',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+      },
+      responseKeyword: 'success',
+    },
+    {
+      id: 'data_devarshi_dev',
+      name: 'Analytics Status',
+      method: 'GET',
+      target: 'https://data.devarshi.dev/',
+      statusPageLink: 'https://data.devarshi.dev/',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare',
+      },
+      responseKeyword: 'success',
     },
     // Example TCP Monitor
-    {
-      id: 'test_tcp_monitor',
-      name: 'Example TCP Monitor',
-      // `method` should be `TCP_PING` for tcp monitors
-      method: 'TCP_PING',
-      // `target` should be `host:port` for tcp monitors
-      target: '1.2.3.4:22',
-      tooltip: 'My production server SSH',
-      statusPageLink: 'https://example.com',
-      timeout: 5000,
-    },
+    // {
+    //   id: 'test_tcp_monitor',
+    //   name: 'Example TCP Monitor',
+    //   // `method` should be `TCP_PING` for tcp monitors
+    //   method: 'TCP_PING',
+    //   // `target` should be `host:port` for tcp monitors
+    //   target: '1.2.3.4:22',
+    //   tooltip: 'My production server SSH',
+    //   statusPageLink: 'https://example.com',
+    //   timeout: 5000,
+    // },
   ],
-  notification: {
-    // [Optional] apprise API server URL
-    // if not specified, no notification will be sent
-    appriseApiServer: "https://apprise.example.com/notify",
-    // [Optional] recipient URL for apprise, refer to https://github.com/caronc/apprise
-    // if not specified, no notification will be sent
-    recipientUrl: "tgram://bottoken/ChatID",
-    // [Optional] timezone used in notification messages, default to "Etc/GMT"
-    timeZone: "Asia/Shanghai",
-    // [Optional] grace period in minutes before sending a notification
-    // notification will be sent only if the monitor is down for N continuous checks after the initial failure
-    // if not specified, notification will be sent immediately
-    gracePeriod: 5,
-  },
+  // notification: {
+  //   // [Optional] apprise API server URL
+  //   // if not specified, no notification will be sent
+  //   appriseApiServer: "https://apprise.example.com/notify",
+  //   // [Optional] recipient URL for apprise, refer to https://github.com/caronc/apprise
+  //   // if not specified, no notification will be sent
+  //   recipientUrl: "tgram://bottoken/ChatID",
+  //   // [Optional] timezone used in notification messages, default to "Etc/GMT"
+  //   timeZone: "Asia/Kolkata",
+  //   // [Optional] grace period in minutes before sending a notification
+  //   // notification will be sent only if the monitor is down for N continuous checks after the initial failure
+  //   // if not specified, notification will be sent immediately
+  //   gracePeriod: 5,
+  // },
   callbacks: {
     onStatusChange: async (
       env: any,

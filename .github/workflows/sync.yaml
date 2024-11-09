@@ -39,7 +39,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
           # Fetch latest code
-          git clone https://github.com/lyc8503/UptimeFlare /tmp/latest
+          git clone https://github.com/devarshishimpi/statusflare-devarshi-dev /tmp/latest
           rm -rf /tmp/latest/.git
 
           # Clean current repo and update

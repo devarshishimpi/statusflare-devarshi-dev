@@ -3,7 +3,7 @@
   <a title="简体中文" href="README_zh-CN.md"><img src="https://img.shields.io/badge/-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-A31F34?style=for-the-badge" alt="简体中文"></a>
 </div>
 
-# ✔[UptimeFlare](https://github.com/lyc8503/UptimeFlare)
+# ✔[UptimeFlare](https://github.com/devarshishimpi/statusflare-devarshi-dev)
 
 一个由 Cloudflare Workers 驱动的功能丰富、Serverless 且免费的 Uptime 监控及状态页面。
 
@@ -36,4 +36,4 @@
 
 ## ⚡快速入门 / 📄文档
 
-请参阅 [Wiki](https://github.com/lyc8503/UptimeFlare/wiki)
+请参阅 [Wiki](https://github.com/devarshishimpi/statusflare-devarshi-dev/wiki)
