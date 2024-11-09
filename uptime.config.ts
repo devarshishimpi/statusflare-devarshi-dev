@@ -48,8 +48,8 @@ const workerConfig = {
     {
       id: 'static_devarshi_dev',
       name: 'Static CDN',
-      method: 'GET',
-      target: 'https://static.devarshi.dev',
+      method: 'TCP_PING',
+      target: 'static.devarshi.dev:443',
       statusPageLink: 'https://static.devarshi.dev',
       expectedCodes: [200, 307],
       timeout: 10000,
@@ -61,8 +61,8 @@ const workerConfig = {
     {
       id: 'cve_2024_6387_checker_devarshi_dev',
       name: 'CVE 2024 6387 Checker Website',
-      method: 'GET',
-      target: 'https://cve-2024-6387-checker.devarshi.dev/',
+      method: 'TCP_PING',
+      target: 'cve-2024-6387-checker.devarshi.dev:443',
       statusPageLink: 'https://cve-2024-6387-checker.devarshi.dev/',
       expectedCodes: [200, 307],
       timeout: 10000,
@@ -74,8 +74,8 @@ const workerConfig = {
     {
       id: 'lunar_devarshi_dev',
       name: 'Lunar Theme Website',
-      method: 'GET',
-      target: 'https://lunar.devarshi.dev/',
+      method: 'TCP_PING',
+      target: 'lunar.devarshi.dev:443',
       statusPageLink: 'https://lunar.devarshi.dev/',
       expectedCodes: [200, 307],
       timeout: 10000,
@@ -87,8 +87,8 @@ const workerConfig = {
     {
       id: 'data_devarshi_dev',
       name: 'Analytics Status',
-      method: 'GET',
-      target: 'https://data.devarshi.dev/',
+      method: 'TCP_PING',
+      target: 'data.devarshi.dev:443',
       statusPageLink: 'https://data.devarshi.dev/',
       expectedCodes: [200, 307],
       timeout: 10000,
